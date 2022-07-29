@@ -1,0 +1,165 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Marvel: New Journey GUI", "Synapse")
+ 
+ local Main = Window:NewTab("Main")
+ local MainSection = Main:NewSection("Main Menu")
+ 
+ 
+ MainSection:NewToggle("Anti-Annoy", "bypass Hex, ", function(state)
+    if state then
+ _G.Mellee = true---- make true into false to stop loop
+    while _G.Mellee == true do wait(1)
+    
+    local success, errMsg = pcall(function()
+ local plr = game.Players.LocalPlayer.Character
+ plr.Humanoid.ScarletWitchHexCreationPickup:destroy()
+ 
+    end)
+end
+end
+end)
+
+
+ MainSection:NewToggle("Auto-Hide Name", "ToggleInfo", function(state)
+    if state then
+while true do wait(0,5)
+local success, errMsg = pcall(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.Tag:destroy()
+end)
+end
+ end
+end)
+local Tab = Window:NewTab("Charecters/Shortcuts")
+local Section = Tab:NewSection("Charecters")
+Section:NewButton("Iceman", "ButtonInfo", function()
+    print("Clicked")
+    local args = {
+    [1] = 1
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteFunctions.MorphCharacter:InvokeServer(unpack(args))
+
+end)
+Section:NewButton("Jean", "ButtonInfo", function()
+    print("Clicked")
+    local args = {
+    [1] = 2
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteFunctions.MorphCharacter:InvokeServer(unpack(args))
+
+end)
+Section:NewButton("Agatha", "ButtonInfo", function()
+    print("Clicked")
+    local args = {
+    [1] = 3
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteFunctions.MorphCharacter:InvokeServer(unpack(args))
+
+end)
+Section:NewButton("Engame Wanda", "ButtonInfo", function()
+    print("Clicked")
+    local args = {
+    [1] = 4
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteFunctions.MorphCharacter:InvokeServer(unpack(args))
+
+end)
+Section:NewButton("Wanda Wardrobe", "ButtonInfo", function()
+    print("Clicked")
+    local args = {
+    [1] = 5
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteFunctions.MorphCharacter:InvokeServer(unpack(args))
+
+end)
+Section:NewButton("Scarlet Witch", "ButtonInfo", function()
+    print("Clicked")
+    local args = {
+    [1] = 6
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteFunctions.MorphCharacter:InvokeServer(unpack(args))
+
+end)
+Section:NewButton("Moncia", "ButtonInfo", function()
+    print("Clicked")
+    local args = {
+    [1] = 7
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteFunctions.MorphCharacter:InvokeServer(unpack(args))
+
+end)
+Section:NewButton("Storm", "ButtonInfo", function()
+    print("Clicked")
+    local args = {
+    [1] = 8
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteFunctions.MorphCharacter:InvokeServer(unpack(args))
+
+end)
+Section:NewButton("Storm goddess", "ButtonInfo", function()
+    print("Clicked")
+    local args = {
+    [1] = 9
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteFunctions.MorphCharacter:InvokeServer(unpack(args))
+
+end)
+Section:NewButton("MOM wanda", "ButtonInfo", function()
+    print("Clicked")
+    local args = {
+    [1] = 11
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteFunctions.MorphCharacter:InvokeServer(unpack(args))
+
+end)
+Section:NewButton("838 Variant", "ButtonInfo", function()
+    print("Clicked")
+    local args = {
+    [1] = 14
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteFunctions.MorphCharacter:InvokeServer(unpack(args))
+
+end)
+Section:NewButton("Invisabitch", "ButtonInfo", function()
+    print("Clicked")
+    local args = {
+    [1] = 13
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteFunctions.MorphCharacter:InvokeServer(unpack(args))
+
+end)
+Section:NewButton("Monster", "ButtonInfo", function()
+    print("Clicked")
+        local args = {
+    [1] = 12
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteFunctions.MorphCharacter:InvokeServer(unpack(args))
+
+end)
+local Tab = Window:NewTab("Infnite Yeild")
+local Section = Tab:NewSection("Admin")
+Section:NewButton("Infnite Yeild", "ButtonInfo", function()
+    print("Clicked")
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+
+end)
+local Tab = Window:NewTab("Credits")
+local Section = Tab:NewSection("Icyx#3017")
+local Section = Tab:NewSection("Claudev0#8849")
+local Tab = Window:NewTab("GUI")
+local Section = Tab:NewSection("Toggle Gui/Untoggle")
+Section:NewKeybind("Toggle/Untoggle UI", "KeybindInfo", Enum.KeyCode.P, function()
+	Library:ToggleUI()
+end)
